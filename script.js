@@ -1218,7 +1218,3 @@ function openLocalVideo(filePath) {
 /* ---------- INIT ---------- */
 window.addEventListener("DOMContentLoaded", loadVideos);
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js")
-    .then(() => console.log("Service Worker Registered"));
-}
