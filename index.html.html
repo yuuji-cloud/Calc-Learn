@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CalcLearn</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div id="menuBtn" class="menu-btn">☰</div>
+   <div id="mainContent1"></div>
+<button id="btnAdmin">Admin Upload</button>
+  </header>
+
+  <!-- App Layout -->
+  <div class="app">
+
+    <!-- Sidebar (Hidden by default) -->
+    <nav class="mini-menu" id="sidebar">
+     <button id="btnDeriv">Deriv</button>
+     <button id="btnLim">Lim</button>
+     <button id="btnIntegr">Integr</button>
+     <button id="btnPrac">Prac</button>
+     <button id="btnStats">Stats</button>
+     <button id="btnVideos">Videos</button>
+     <button id="btnStudy">Study Timer</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content" id="mainContent">
+  <h2>Welcome to CalcLearn</h2>
+  <p>Use the menu to choose a topic.</p>
+</main>
+
+  </div>
+  <!-- FLOATING VIDEO -->
+<!-- FLOATING VIDEO PLAYER -->
+<div id="floatingVideo" class="floating-video hidden">
+
+  <div id="videoDragHandle" class="video-header">
+    <span>📺 Now Playing</span>
+    <button id="closeVideo">✖</button>
+  </div>
+
+  <video id="floatingVideoPlayer" controls>
+    <source id="videoSource" src="" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <a id="downloadVideo" download class="download-btn">⬇ Download</a>
+
+</div>
+
+<!-- FLOATING STUDY TIMER -->
+<div id="floatingTimer" class="floating-timer hidden">
+  
+  <div id="timerDragHandle" class="timer-header">
+    Study Timer
+    <button id="closeTimer">✖</button>
+  </div>
+
+  <div class="timer-body">
+    <div id="timerDisplay">25:00</div>
+
+    <input type="number" id="timerMinutes" placeholder="Minutes" min="1" />
+
+    <div class="timer-buttons">
+      <button id="startTimer">Start</button>
+      <button id="pauseTimer">Pause</button>
+      <button id="resetTimer">Reset</button>
+    </div>
+
+    <p id="timerMessage"></p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
